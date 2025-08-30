@@ -12,10 +12,7 @@ async def main(message: cl.Message):
         starting_agent=math_agent,
         input=message.content,
     )
-
     print("🔹 Agent raw result:", res)
-
-    # Correct field to use
     answer = res.final_output
 
     await cl.Message(
